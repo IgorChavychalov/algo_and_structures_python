@@ -3,3 +3,12 @@
 цифр и вывести на экран. Например, если введено число 3486,
  то надо вывести число 6843.
 """
+
+number = input('Введите число: ')
+
+result = ''
+
+for digit in number:
+    result = str(digit) + result
+
+print('Абра кодабра', int(result))

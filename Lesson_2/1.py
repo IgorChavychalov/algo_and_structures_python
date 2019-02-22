@@ -9,3 +9,29 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+
+while True:
+    digit_1 = int(input('Введите первое целое число: '))
+    digit_2 = int(input('Введите второе целое число: '))
+    action = input('Выход - [0], Знаки - [+] [-] [*] [/] \n Укажите действие над числами: ')
+
+    if action == '0':
+        break
+
+    elif action == '+':
+        result = digit_1 + digit_2
+
+    elif action == '-':
+        result = digit_1 - digit_2
+
+    elif action == '*':
+        result = digit_1 * digit_2
+
+    elif action == '/' and digit_2 != 0:
+        result = digit_1 / digit_2
+
+    else:
+        print('Не верный ввод')
+        continue
+
+    print(' ' * 19, 'Результат:', result)
