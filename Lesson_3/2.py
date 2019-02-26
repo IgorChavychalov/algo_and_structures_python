@@ -5,3 +5,15 @@
 (или 0, 3, 4, 5 - если индексация начинается с нуля),
 т.к. именно в этих позициях первого массива стоят четные числа.
 """
+from random import randint
+
+data = [randint(0, 99) for i in range(10)]
+
+result = []
+
+for i in range(len(data)):
+    if data[i] % 2 == 0 and data != 0:
+        result.append(i)
+
+print('исходный массив', data)
+print('индексы чётных элементов', result)
